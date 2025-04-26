@@ -1,0 +1,90 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\section{Publisher Analysis of Top-Tier Journals}
+
+\subsection{Defining Publisher Categories}
+\vspace{0.2cm}
+\noindent
+Understanding who publishes the leading Data Science journals provides context on the motivations, structures, and potential biases within the publishing ecosystem. For this analysis, publishers of the top 20th percentile journals are categorized as follows:
+
+
+\subsubsection{University Press}
+\vspace{0.2cm}
+\noindent
+Publishing houses formally affiliated with a university. They are typically non-profit organizations focused on disseminating peer-reviewed scholarly research, monographs, and journals, upholding academic standards as part of the university's mission. Examples include Oxford University Press, Cambridge University Press, MIT Press, and presses belonging to associations like the Association of University Presses (AUP) or the Association of European University Presses (AEUP). Princeton University Press publishes the \textit{Annals of Mathematics.}
+
+\subsubsection{Private Commercial Publisher}
+\vspace{0.2cm}
+\noindent
+For-profit companies, often large multinational corporations, involved in publishing academic journals and books across various disciplines. Major examples include Elsevier, Springer Nature, Taylor \& Francis, Wiley-Blackwell, and Now Publishers Inc. Many are members of trade associations like STM.
+
+\subsubsection{Association/Society Publisher}
+\vspace{0.2cm}
+\noindent
+Publishing operations managed by or affiliated with scholarly societies, professional associations, or institutes. These are often non-profit, with publishing activities supporting the society's mission to advance its field. Examples include the Institute of Electrical and Electronics Engineers (IEEE), the Association for Computing Machinery (ACM), the Institute of Mathematical Statistics (IMS), the American Statistical Association (ASA), the American Association for the Advancement of Science (AAAS), and the Radiological Society of North America (RSNA).
+
+\subsubsection{Government Publisher}
+\vspace{0.2cm}
+\noindent
+Entities that are part of a national government structure, publishing official reports, statistics, or research funded or conducted by government agencies. An example is the U.S. Government Printing Office, publisher of \textit{Vital and Health Statistics, Series 2.}
+
+\subsubsection{Other/Joint Venture}
+\vspace{0.2cm}
+\noindent
+Publishers that do not fit neatly into the above categories, or represent collaborations between different types of entities. An example is KeAi Communications Co. Ltd., a joint venture between Elsevier (Private Commercial) and China Science Publishing \& Media Ltd. (potentially state-affiliated). Another example is the Foundation for Statistical Computing, publisher of the \textit{Journal of Statistical Software.}
+
+\subsection{Categorization of Publishers}
+
+\vspace{0.2cm}
+\noindent
+Applying these categories to the publishers of the top 20th percentile journals provides a snapshot of the publishing landscape. Table 2 categorizes the publishers for the illustrative selection of top-tier journals presented earlier.
+
+\begin{table}[H]
+    \centering
+    \scriptsize
+    \caption{Top 20 Publishers in Data Science Journals}
+    \resizebox{\textwidth}{!}{
+        \pgfplotstabletypeset[
+            col sep=comma,
+            string type,
+            header=true,
+            every head row/.style={before row=\hline, after row=\hline},
+            every last row/.style={after row=\hline},
+            columns/Approx. Rank/.style={column type={|p{1cm}|}},
+            columns/Journal Title/.style={column type={p{5cm}|}},
+            columns/Publisher/.style={column type={p{4cm}|}}, 
+            columns/Publisher Category/.style={column type={p{4cm}|}},
+        ]{data/top-20-pulishers-list.csv}
+    }
+    \label{tab:top_20_publishers}
+\end{table}
+\vspace{0.2cm}
+
+\footnotesize {\textbf{Note:} Publisher information derived from external knowledge sources.
+
+\begin{description}
+    \item[*] MIS Quarterly is published by a university research center, functionally similar to a university press in this context.
+    \item[**] Published by a commercial publisher on behalf of a society (ASA, POMS, RSS).
+    Categorization can be debated; here classified by the commercial entity handling publication.
+    \item[***] Published by a university press on behalf of a trust.
+\end{description}}
+
+\subsection{Analysis of Publisher Landscape}
+
+\vspace{0.2cm}
+\noindent
+The categorization reveals a mixed publishing environment for top-tier Data Science journals. Private Commercial Publishers (Elsevier, Springer Nature, Taylor \& Francis, Wiley, Now Publishers) and Association/Society Publishers (IEEE, INFORMS, IMS, AAAS) appear to be the most dominant categories within this elite group. University Presses (Oxford University Press, University of Minnesota's MISRC) also play a role, particularly for long-established, highly regarded journals like \textit{Biometrika} and \textit{MIS Quarterly}. Government publishers are rare at this level, and 'Other' categories like foundations or joint ventures also represent a smaller fraction.
+
+\vspace{0.2cm}
+\noindent
+Dominant individual publishers clearly emerge. IEEE holds a significant number of top-ranked journals, particularly those stemming from the Artificial Intelligence and broader Computer Science categories. Elsevier and Taylor \& Francis also publish multiple journals across the IS, Decision Sciences, and AI domains represented in the top tier. Springer Nature features prominently with high-impact titles like \textit{Nature Machine Intelligence}. INFORMS is key for Management Science and IS Research.
+
+\vspace{0.2cm}
+\noindent
+Furthermore, the dominant publisher type appears to exhibit some variation across the core subfields contributing to Data Science. Association/Society publishers like IEEE and ACM (whose journals like \textit{JACM} rank highly ) are particularly strong in the AI and Computer Science areas, reflecting the history of society-led publications and conferences in these fields. In Statistics, while commercial publishers (Taylor \& Francis for \textit{JASA}) and university presses (\textit{Biometrika} by OUP) are present, statistical societies like IMS (\textit{Annals of Statistics, Annals of Probability}) remain central publishers of foundational journals. Information Systems and Decision Sciences show a blend, with strong representation from Associations (INFORMS), commercial publishers (Elsevier, Taylor \& Francis), and university-affiliated centers (MIS Quarterly). This variation reflects the different historical development paths and publishing cultures of the contributing disciplines.
+
+\vspace{0.2cm}
+\noindent
+Observing the relationship between publisher type and rank within the very top echelon (e.g., the top 10-20) does not reveal an exclusive dominance by any single type. While commercial publishers hold several top spots (e.g., \textit{Foundations and Trends, Int J Info Mgmt, Nature Machine Intelligence}), Association/Society publishers (AAAS for Science Robotics, INFORMS for Management Science and ISR, IMS for \textit{Annals of Statistics}, IEEE for T-PAMI) are also highly represented at the peak. This suggests that journal prestige in the Data Science domain is achieved by leading publications across different publisher models, likely driven more by editorial quality, scope, and community standing than by publisher type alone.
+
+\end{document}

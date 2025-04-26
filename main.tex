@@ -1,0 +1,93 @@
+\documentclass[a4paper,12pt,onecolumn]{article}
+
+% Basic packages
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{float}
+
+% To underline hyperlinks
+\usepackage{ulem}
+\newcommand{\ulhref}[2]{\href{#1}{\uline{#2}}}
+
+% Encoding and font packages
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+
+% Geometry and layout
+\usepackage[margin=0.5in]{geometry}
+
+% Graphics and figures
+\usepackage{graphicx}
+\graphicspath{{./images/}{./figures/}}
+
+\usepackage{pgfplots}
+\usepackage{pgf-pie}
+\usepackage{pgfplotstable}
+\pgfplotsset{compat=1.18}
+
+\usepackage{caption}
+\usepackage{subcaption}
+
+% Hyperlinks
+\usepackage[hidelinks]{hyperref}
+
+% Bibliography
+\usepackage{cite}
+
+% Subfiles for modular structure
+\usepackage{subfiles} % Load last
+
+\begin{document}
+
+% Title information
+\begin{titlepage}
+    \centering
+    {\Huge \bfseries Analysis of Top-Tier Data Science Journals: \par}
+    \vspace{0.2cm}
+    {\Large Ranking, Publishers, and Publication Timelines (Scopus Indexed, SJR 2024)\par}
+    \vspace{0.5cm}
+    {\Large \textbf{BERNARD BIRENDRA DAS, 2490031}\par}
+    \vspace{0.5cm}
+    {\large \today\par}
+
+\begin{abstract}
+\vspace{0.2cm}
+\noindent    
+Navigating the publication landscape requires authors to consider factors beyond traditional citation impact metrics. This is particularly true in the interdisciplinary field of data science, where understanding operational journal characteristics is crucial for strategic manuscript submission. This study aimed to provide deeper insights for prospective authors by compiling and analyzing a comprehensive set of operational and impact metrics for 20 leading journals relevant to data science, identified through a synthesized ranking based on 2024 SCImago Journal Rank (SJR) across Artificial Intelligence, Information Systems, Statistics \& Probability, and Decision Sciences categories. Data were collected from official journal and publisher websites, Journal Citation Reports (JCR), Scopus, and other databases for nine key parameters: acceptance rate, time to first decision, submission-to-acceptance time, acceptance-to-publication time, Article Processing Charges (APCs)/access model, major indexing services, latest Journal Impact Factor (JIF), latest CiteScore, and peer review type. Data limitations and reliance on non-official sources for some metrics were noted. The analysis revealed significant variability across these top-tier journals. While AI-focused journals often demonstrated high impact metrics (JIF/CiteScore), leading Information Systems and Statistics journals also maintained considerable influence. A key finding was the frequent lack of officially reported data for acceptance rates and review timelines, with user-reported data often suggesting longer durations than published averages. Hybrid Open Access models, frequently associated with substantial APCs, were prevalent among major publishers. Single-blind and double-blind were the most common peer review mechanisms identified. This consolidated dataset offers valuable comparative insights for authors evaluating potential publication venues in data science. However, the findings underscore the necessity for authors to verify current journal-specific information and consider qualitative factors, such as scope alignment, alongside these metrics when making submission decisions.
+
+\vspace{1cm}
+\noindent
+\textbf{Keywords:} Data Science Journals, Journal Metrics, Publication Timelines, Acceptance Rate, Article Processing Charges (APC), Open Access, Journal Impact Factor (JIF), CiteScore, Peer Review, Scholarly Publishing, Author Guidance.
+\end{abstract}
+
+\newpage
+\doublespacing
+\tableofcontents
+\singlespacing
+\end{titlepage}
+
+% Introduction
+\newpage
+\subfile{sections/data-science-journals-landscape.tex}
+
+\newpage
+\subfile{sections/leading-data-science-journals.tex}
+
+\newpage
+\subfile{sections/leading-data-science-publishers.tex}
+
+\newpage
+\subfile{sections/publication-timelines.tex}
+
+% Conclusion
+\newpage
+\subfile{sections/conclusion.tex}
+
+% Bibliography
+\nocite{*}
+\bibliographystyle{ieeetr}
+\bibliography{references}
+
+\end{document}
