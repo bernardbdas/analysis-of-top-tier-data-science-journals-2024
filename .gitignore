@@ -11,6 +11,11 @@
 *.nav
 *.snm
 *.vrb
+*.lof
+*.lot
+
+*.table.json
+*.schema.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
